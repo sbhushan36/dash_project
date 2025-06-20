@@ -1,0 +1,39 @@
+# .github/workflows/ci.yml
+
+name: CI for Dash App
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+
+    runs-on: rocky-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run basic syntax check
+      run: python -m py_compile app.py
+
+    - name: Confirm CSV exists
+      run: |
+        if [ ! -f "tech_data.csv" ]; then
+          echo "tech_data.csv does not exist. Creating an empty one."
+          touch tech_data.csv
+        fi
+
