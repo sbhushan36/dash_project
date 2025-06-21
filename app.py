@@ -82,5 +82,5 @@ def handle_data(n_clicks, pathname, name, selected_techs):
     return generate_figure(df), df.to_dict("records"), msg
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=8080)
+    app.run(debug=True, host='0.0.0.0', port=9071)
 
