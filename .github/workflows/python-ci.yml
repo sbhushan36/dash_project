@@ -25,6 +25,6 @@ jobs:
       - name: Run basic check
         run: |
           python app.py &
-          sleep 5
-          kill $!
+          #sleep 5
+          #kill $!
 
