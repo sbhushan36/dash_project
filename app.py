@@ -4,10 +4,7 @@ import pandas as pd
 import plotly.express as px
 import os
 
-<<<<<<< HEAD
-=======
 # CSV file name
->>>>>>> 145d3dc54e93fec9169c8ff87a615152cdcb121b
 filename = "tech_data.csv"
 technologies = ["Ansible","Python" ,"CI/CD", "Jenkins", "AWS", "OCI"]
 
