@@ -22,6 +22,7 @@ app = dash.Dash(__name__)
 app.title = "Tech Knowledge Tracker"
 
 app.layout = html.Div(style={"textAlign": "center", "backgroundColor": "#f0f8ff", "padding": "20px"}, children=[
+#app.layout = html.Div(style={"textAlign": "center", "backgroundColor": "#D8BFD8", "padding": "20px"}, children=[
     dcc.Location(id="url"),
 
     #html.H1("Hello Learners!", style={"color": "#2c3e50"}),
