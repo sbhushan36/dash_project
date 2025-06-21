@@ -4,15 +4,12 @@ import pandas as pd
 import plotly.express as px
 import os
 
-# CSV filename
 filename = "tech_data.csv"
 technologies = ["Ansible","Python" ,"CI/CD", "Jenkins", "AWS", "OCI"]
 
-# Ensure CSV exists
 if not os.path.exists(filename):
     pd.DataFrame(columns=["Name"] + technologies).to_csv(filename, index=False)
 
-# Function to create bar chart
 def generate_figure(dataframe):
     if dataframe.empty:
         return px.bar(title="Tech Knowledge Distribution")
