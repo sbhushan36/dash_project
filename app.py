@@ -21,12 +21,13 @@ def generate_figure(dataframe):
 app = dash.Dash(__name__)
 app.title = "Tech Knowledge Tracker"
 
-app.layout = html.Div(style={"textAlign": "center", "backgroundColor": "#f0f8ff", "padding": "20px"}, children=[
-#app.layout = html.Div(style={"textAlign": "center", "backgroundColor": "#D8BFD8", "padding": "20px"}, children=[
+#app.layout = html.Div(style={"textAlign": "center", "backgroundColor": "#f0f8ff", "padding": "20px"}, children=[
+app.layout = html.Div(style={"textAlign": "center", "backgroundColor": "#D8BFD8", "padding": "20px"}, children=[
     dcc.Location(id="url"),
 
     #html.H1("Hello Learners!", style={"color": "#2c3e50"}),
-    html.H1("Enter Name & Select Skills", style={"color": "#2c3e50"}),
+    #html.H1("Enter Name & Select Skills", style={"color": "#2c3e50"}),
+    html.H1("Enter Name & Select Skills Learners", style={"color": "#2c3e50"}),
 
     html.Div([
         dcc.Input(id="username", type="text", placeholder="Enter your name", style={"marginBottom": "10px"}),
