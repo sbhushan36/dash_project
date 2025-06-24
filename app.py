@@ -6,7 +6,7 @@ import os
 
 # CSV file name
 filename = "tech_data.csv"
-#technologies = ["Ansible","Python" ,"CI/CD", "Jenkins", "AWS", "OCI"]
+technologies = ["Ansible","Python" ,"CI/CD", "Jenkins", "AWS", "OCI"]
 
 if not os.path.exists(filename):
     pd.DataFrame(columns=["Name"] + technologies).to_csv(filename, index=False)
