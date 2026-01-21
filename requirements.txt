@@ -2,3 +2,7 @@ dash
 plotly
 pandas
 gunicorn
+uvicorn
+langchain_ollama
+fastapi
+requests
